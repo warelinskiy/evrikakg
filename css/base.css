@@ -1,0 +1,76 @@
+/* ═══════════════════════════════════
+   BASE  —  css/base.css
+═══════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;transition:background .4s,color .4s}
+
+/* ── Pages ── */
+.page{display:none}.page.active{display:block}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px 60px}
+.page-hdr{padding:28px 0 10px}
+.page-hdr h1{font-size:26px;font-weight:900}
+.page-hdr p{font-size:13px;color:var(--muted);margin-top:4px;font-weight:600}
+
+/* ── Grids ── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+
+/* ── Generic card ── */
+.card{background:var(--surface);border-radius:var(--r);padding:22px 24px;box-shadow:var(--shadow);border:1px solid var(--border)}
+
+/* ── Buttons ── */
+.btn-hw{background:#fff;color:#A87000;border:none;font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;padding:11px 26px;border-radius:26px;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.12);transition:.15s}
+.btn-hw:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.17)}
+.btn-ho{background:rgba(255,255,255,.2);color:#fff;border:2px solid #fff;font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;padding:11px 26px;border-radius:26px;cursor:pointer;transition:.18s}
+.btn-ho:hover{background:rgba(255,255,255,.34)}
+.btn-y{background:var(--y);color:#fff;border:none;font-family:'Nunito',sans-serif;font-weight:900;font-size:12px;padding:8px 20px;border-radius:10px;cursor:pointer;box-shadow:0 3px 12px rgba(245,192,0,.35);transition:.18s}
+.btn-y:hover{background:var(--yd);transform:translateY(-1px)}
+.btn-os{background:none;border:1.5px solid var(--y);color:var(--yd);font-family:'Nunito',sans-serif;font-weight:800;font-size:11px;padding:6px 13px;border-radius:8px;cursor:pointer;transition:.18s}
+.btn-os:hover{background:var(--ybg)}
+.btn-rs{background:none;border:1.5px solid #FFCDD2;color:#C62828;font-family:'Nunito',sans-serif;font-weight:800;font-size:11px;padding:6px 13px;border-radius:8px;cursor:pointer;transition:.18s}
+.btn-rs:hover{background:#FFEBEE}
+.btn-s{background:var(--surface);border:1.5px solid var(--border);color:var(--muted);font-family:'Nunito',sans-serif;font-weight:800;font-size:11px;padding:6px 13px;border-radius:8px;cursor:pointer;transition:.18s}
+.btn-s:hover{background:var(--surface2)}
+
+/* ── Helpers ── */
+.flex-end{display:flex;justify-content:flex-end;gap:8px}
+.flex-btw{display:flex;align-items:center;justify-content:space-between}
+.mt10{margin-top:10px}
+.mt14{margin-top:14px}
+.fc-y{color:var(--y)}
+.fc-bolt{color:var(--bolt)}
+
+/* ── Banners ── */
+.banners{position:fixed;top:calc(var(--nav) + 10px);left:0;width:175px;padding:0 8px;z-index:150;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.banners-right{left:auto;right:0}
+.banner{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:11px;font-weight:700;color:var(--muted);line-height:1.5;pointer-events:all;animation:slideInL .4s ease;box-shadow:var(--shadow)}
+.banners-right .banner{animation:slideInR .4s ease}
+.banner-title{font-size:10px;font-weight:900;color:var(--y);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+@keyframes slideInL{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInR{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+
+/* ── Toast ── */
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(100px);background:#1A1A1A;color:#fff;padding:10px 22px;border-radius:24px;font-weight:800;font-size:13px;z-index:999;transition:transform .3s ease;pointer-events:none;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0)}
+
+/* ── Footer ── */
+footer{background:#1A1A1A;color:#555;text-align:center;padding:18px;font-size:11px;font-weight:700}
+
+/* ── Medals / Achievements ── */
+.ach-g{display:flex;gap:7px;flex-wrap:wrap}
+.ach{background:var(--ybg);border-radius:9px;padding:7px 10px;font-size:18px;text-align:center;border:1.5px solid var(--y);min-width:44px}
+.ach.locked{opacity:.25;border-color:var(--border);background:var(--surface2);filter:grayscale(1)}
+.ach-tip{font-size:9px;font-weight:800;color:var(--muted);margin-top:2px;display:block}
+.medal{border-radius:9px;padding:8px 10px;font-size:18px;text-align:center;min-width:44px;border:1.5px solid}
+.medal-autumn{background:#FFF3E0;border-color:#FF8F00}
+.medal-winter{background:#E3F2FD;border-color:#1565C0}
+.medal-spring{background:#F1F8E9;border-color:#558B2F}
+.medal-summer{background:#FFF9C4;border-color:#F57F17}
+
+/* ── Responsive ── */
+@media(max-width:680px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .banners,.banners-right{display:none}
+}

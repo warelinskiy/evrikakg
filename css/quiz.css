@@ -1,0 +1,37 @@
+/* css/quiz.css */
+.quiz-page{min-height:calc(100vh - var(--nav));background:#1A1A2E;display:flex;flex-direction:column}
+.q-topbar{background:#16213E;padding:12px 22px;display:flex;align-items:center;justify-content:space-between}
+.q-title{color:#fff;font-size:13px;font-weight:800}
+.q-ctr{text-align:center}
+.q-prog{color:rgba(255,255,255,.6);font-size:10px;font-weight:700;margin-bottom:1px}
+.q-timer{font-size:30px;font-weight:900;color:#fff;font-family:'Fira Code',monospace;line-height:1}
+.q-timer.urg{color:#FF5252;animation:pulse .5s infinite alternate}
+@keyframes pulse{from{transform:scale(1)}to{transform:scale(1.08)}}
+.q-tbar{width:68px;height:4px;background:#2a2a4a;border-radius:4px;margin:3px auto 0;overflow:hidden}
+.q-tfill{height:100%;background:var(--y);border-radius:4px;transition:width 1s linear}
+.q-rw{text-align:right}
+.q-xpt{color:var(--y);font-size:12px;font-weight:900}
+.q-bt{color:var(--bolt);font-size:12px;font-weight:900;margin-top:1px}
+.q-live-top{color:#FF5252;font-size:12px;font-weight:900}
+.quiz-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 16px}
+.qwrap{background:#fff;border-radius:18px;padding:24px 32px;max-width:640px;width:100%;text-align:center;margin-bottom:20px;box-shadow:0 8px 40px rgba(0,0,0,.3)}
+.q-num{font-size:10px;font-weight:900;color:#999;margin-bottom:5px;letter-spacing:1px;text-transform:uppercase}
+.q-text{font-size:19px;font-weight:900;line-height:1.4;color:#1A1A1A}
+.q-code{font-family:'Fira Code',monospace;font-size:13px;background:#1A1A2E;color:#7EC8E3;border-radius:9px;padding:10px 14px;margin-top:10px;text-align:left;line-height:1.5;white-space:pre}
+.q-ans{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;width:100%}
+.q-btn{padding:16px 16px;border-radius:13px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:#fff;text-align:left;display:flex;align-items:center;gap:10px;transition:.12s;box-shadow:0 4px 12px rgba(0,0,0,.2)}
+.q-btn:hover:not(:disabled){transform:scale(1.03)}
+.q-btn:disabled{cursor:default}
+.ash{width:30px;height:30px;min-width:30px;border-radius:6px;background:rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-size:15px}
+.qr{background:#E53935}.qb{background:#1E88E5}.qy{background:#F9A825;color:#333}.qg{background:#43A047}
+.q-btn.correct{animation:cf .5s}
+.q-btn.wrong{opacity:.35}
+@keyframes cf{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+.q-fb{margin-top:14px;text-align:center;font-size:19px;font-weight:900;color:#fff;opacity:0;transition:opacity .3s}
+.q-fb.show{opacity:1}
+.q-end{text-align:center;color:#fff;max-width:440px;width:100%}
+.qe-sc{font-size:64px;font-weight:900;color:var(--y);line-height:1}
+.qe-bolt{font-size:16px;font-weight:900;color:var(--bolt);background:rgba(255,107,53,.15);border-radius:12px;padding:8px 18px;display:inline-block;margin:10px 0 18px}
+.qe-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.qe-info{background:rgba(255,255,255,.08);border-radius:12px;padding:13px;margin-bottom:18px;font-size:13px;font-weight:800;color:rgba(255,255,255,.8)}
+@media(max-width:680px){.q-ans{grid-template-columns:1fr}}
