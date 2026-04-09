@@ -1,0 +1,30 @@
+/* shop.css – shop hero, item grid, theme buttons, bolt price */
+.shop-hdr{background:linear-gradient(135deg,rgba(255,87,34,.12),rgba(255,87,34,.04));border:1px solid rgba(255,87,34,.2);border-radius:16px;padding:28px;display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;gap:20px}
+.shop-hdr-left h1{font-size:24px;font-weight:900;margin-bottom:4px}
+.shop-hdr-left p{font-size:13px;color:var(--muted);font-weight:700}
+.bolt-bal{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 24px;text-align:center;flex-shrink:0;min-width:120px}
+.bolt-bal .bn{font-size:30px;font-weight:900;color:var(--bolt)}
+.bolt-bal .bl{font-size:11px;font-weight:800;color:var(--muted)}
+.shop-sec{margin-bottom:32px}
+.shop-sec-hdr{font-size:16px;font-weight:900;margin-bottom:14px;display:flex;align-items:center;gap:8px;color:var(--text)}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.si{background:var(--surf);border:1px solid var(--border);border-radius:var(--r);padding:18px 14px;text-align:center;transition:.18s;position:relative;overflow:hidden}
+.si:hover{border-color:rgba(255,255,255,.2);transform:translateY(-3px)}
+.si.owned{border-color:var(--green)}
+.si.owned::after{content:"✓";position:absolute;top:8px;right:8px;background:var(--green);color:#fff;width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;line-height:18px}
+.si-ic{font-size:36px;margin-bottom:8px}
+.si-nm{font-size:12px;font-weight:900;margin-bottom:3px;color:var(--text)}
+.si-ds{font-size:11px;color:var(--muted);font-weight:700;margin-bottom:10px;line-height:1.4}
+.bolt-pr{display:inline-flex;align-items:center;gap:3px;background:var(--boltbg);color:var(--bolt);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:900;margin-bottom:8px}
+.btn-buy{width:100%;background:var(--bolt);color:#fff;border:none;font-family:"Nunito",sans-serif;font-weight:900;font-size:12px;padding:8px;border-radius:7px;cursor:pointer;transition:.18s}
+.btn-buy:hover{opacity:.85;transform:translateY(-1px)}
+.btn-buy:disabled{background:var(--surf3);color:var(--muted);cursor:default;transform:none;opacity:1}
+.theme-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px;margin-bottom:16px}
+.theme-btn{border-radius:10px;padding:14px;text-align:center;cursor:pointer;border:2px solid transparent;transition:.2s;font-family:"Nunito",sans-serif;font-weight:800;font-size:12px}
+.theme-btn:hover{transform:scale(1.04)}
+.theme-btn.active{border-color:var(--y)}
+.th-dark{background:linear-gradient(135deg,#1a1a1a,#333);color:#f0f0f0}
+.th-light{background:linear-gradient(135deg,#f0f0f0,#e0e0e0);color:#333}
+.th-ocean{background:linear-gradient(135deg,#060e1a,#1565c0);color:#90caf9}
+.th-grape{background:linear-gradient(135deg,#0d0812,#7b1fa2);color:#ce93d8}
+.th-aurora{background:linear-gradient(135deg,#050f0e,#00897b);color:#80cbc4}

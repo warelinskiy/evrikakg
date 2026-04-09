@@ -1,0 +1,33 @@
+/* themes.css – CSS custom properties for all colour themes */
+
+:root {
+  --y:#F5C000;--yd:#C89000;--yl:#FFE066;--ybg:rgba(245,192,0,.10);
+  --bolt:#FF5722;--boltbg:rgba(255,87,34,.10);
+  --code:#1976D2;--codebg:rgba(25,118,210,.10);
+  --lang:#7B1FA2;--langbg:rgba(123,31,162,.10);
+  --ky:#C62828;--kybg:rgba(198,40,40,.10);
+  --bg:#0F0F0F;--surf:#1A1A1A;--surf2:#242424;--surf3:#2E2E2E;
+  --text:#F0F0F0;--muted:#888;--border:rgba(255,255,255,.08);
+  --nav-bg:rgba(15,15,15,.96);--shadow:0 4px 24px rgba(0,0,0,.45);
+  --r:12px;--nav:60px;--green:#4CAF50;--red:#F44336;
+}
+[data-theme="light"]{
+  --bg:#F5F5F5;--surf:#fff;--surf2:#eee;--surf3:#e0e0e0;
+  --text:#111;--muted:#666;--border:rgba(0,0,0,.08);
+  --nav-bg:rgba(255,255,255,.96);--shadow:0 4px 24px rgba(0,0,0,.10);
+}
+[data-theme="ocean"]{
+  --bg:#060E1A;--surf:#0D1B2E;--surf2:#122540;--surf3:#163050;
+  --text:#D0E8FF;--muted:#5A8AAA;--border:rgba(100,180,255,.08);
+  --nav-bg:rgba(6,14,26,.96);
+}
+[data-theme="grape"]{
+  --bg:#0D0812;--surf:#170D20;--surf2:#201030;--surf3:#291440;
+  --text:#EDD8FF;--muted:#8060A0;--border:rgba(180,100,255,.08);
+  --nav-bg:rgba(13,8,18,.96);
+}
+[data-theme="aurora"]{
+  --bg:#050F0E;--surf:#081A18;--surf2:#0C2422;--surf3:#103030;
+  --text:#C8F5EE;--muted:#3A8070;--border:rgba(0,200,160,.08);
+  --nav-bg:rgba(5,15,14,.96);
+}

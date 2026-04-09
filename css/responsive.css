@@ -1,0 +1,49 @@
+/* responsive.css – mobile-first breakpoints for all components */
+@media (max-width: 768px) {
+  .wrap{padding:0 16px 60px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  /* Home */
+  .hero-top{grid-template-columns:1fr}
+  .hero-stats{flex-direction:row;flex-wrap:wrap}
+  .hstat{min-width:80px;flex:1}
+  .hero-logo-big{height:60px}
+  .tracks{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .bolt-cards{grid-template-columns:1fr 1fr}
+  .cta-section{padding:32px 20px}
+  /* Auth */
+  .auth-card{padding:24px 18px}
+  /* Chat */
+  .chat-layout{grid-template-columns:1fr}
+  .chat-sidebar{display:none}
+  /* Teacher */
+  .teacher-layout{grid-template-columns:1fr}
+  .t-sidebar{flex-direction:row;flex-wrap:wrap;padding:8px;border-right:none;border-bottom:1px solid var(--border)}
+  .tsb{flex:none;padding:8px 12px}
+  .ts-logo{display:none}
+  .ds-grid{grid-template-columns:1fr 1fr}
+  /* Quiz */
+  .q-ans{grid-template-columns:1fr}
+  .qwrap{padding:20px 18px}
+  /* Profile */
+  .prof-grid{grid-template-columns:1fr}
+  /* Shop */
+  .shop-hdr{flex-direction:column;gap:12px;text-align:center}
+  /* Friends */
+  .friends-grid{grid-template-columns:1fr}
+  /* Kyrgyz */
+  .ky-levels{grid-template-columns:1fr}
+  /* Mascot/AI */
+  .mascot-float,.ai-btn,.ai-box{right:14px}
+  .mascot-float{bottom:14px}
+}
+@media (max-width: 480px) {
+  .tracks{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .bolt-cards{grid-template-columns:1fr 1fr}
+  .tests-grid{grid-template-columns:1fr}
+  .hero-title{font-size:26px}
+  .nav-links a{font-size:12px;padding:5px 10px}
+  .nav-logo img{height:28px}
+  .auth-card{padding:20px 14px}
+}

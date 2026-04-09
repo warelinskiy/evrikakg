@@ -1,0 +1,21 @@
+/* mascot.css – floating mascot character, AI support widget */
+.mascot-float{position:fixed;bottom:24px;right:24px;z-index:300;cursor:pointer;animation:bob 3s ease-in-out infinite;user-select:none}
+.mascot-body{width:56px;height:56px;background:linear-gradient(145deg,#FFD040,#F5A000);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 4px 16px rgba(245,160,0,.35);border:2px solid rgba(255,255,255,.2);transition:.2s;position:relative}
+.mascot-body:hover{transform:scale(1.1)}
+.mascot-helmet{position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:24px}
+.mascot-bubble{position:absolute;bottom:64px;right:0;background:var(--surf);border:1px solid var(--border);border-radius:12px 12px 4px 12px;padding:10px 14px;font-size:12px;font-weight:800;color:var(--text);max-width:200px;line-height:1.5;box-shadow:var(--shadow);display:none;white-space:normal;z-index:1}
+.mascot-bubble.show{display:block;animation:bubblePop .25s ease}
+.ai-btn{position:fixed;bottom:90px;right:24px;z-index:299;background:linear-gradient(135deg,#1565C0,#1976D2);color:#fff;border:none;width:46px;height:46px;border-radius:12px;font-size:20px;cursor:pointer;box-shadow:0 4px 14px rgba(21,101,192,.4);transition:.18s;display:flex;align-items:center;justify-content:center}
+.ai-btn:hover{transform:scale(1.1)}
+.ai-box{position:fixed;bottom:146px;right:24px;z-index:298;width:290px;background:var(--surf);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);display:none;flex-direction:column;overflow:hidden}
+.ai-box.show{display:flex;animation:slideUp .25s ease}
+.ai-hdr{background:linear-gradient(135deg,#1565C0,#1976D2);padding:12px 14px;color:#fff;font-weight:900;font-size:13px;display:flex;align-items:center;gap:8px}
+.ai-hdr-sub{font-size:10px;opacity:.75;margin-left:auto}
+.ai-msgs{flex:1;max-height:240px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;scrollbar-width:thin}
+.ai-msg{padding:8px 11px;border-radius:10px;font-size:12px;font-weight:700;line-height:1.5;max-width:90%}
+.ai-msg-bot{background:var(--surf2);color:var(--text);border-radius:3px 10px 10px 10px;align-self:flex-start}
+.ai-msg-user{background:var(--y);color:#000;border-radius:10px 3px 10px 10px;align-self:flex-end}
+.ai-inp-row{padding:10px;border-top:1px solid var(--border);display:flex;gap:7px}
+.ai-inp{flex:1;padding:8px 11px;border:1px solid var(--border);border-radius:8px;font-family:"Nunito",sans-serif;font-size:12px;font-weight:700;background:var(--surf2);color:var(--text);outline:none}
+.ai-inp:focus{border-color:var(--y)}
+.ai-send{background:var(--y);color:#000;border:none;padding:8px 12px;border-radius:8px;font-family:"Nunito",sans-serif;font-weight:900;font-size:12px;cursor:pointer}

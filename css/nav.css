@@ -1,0 +1,21 @@
+/* nav.css – sticky navbar, nav links, nav pills, nav avatar */
+nav{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);height:var(--nav);position:sticky;top:0;z-index:200;display:flex;align-items:center;padding:0 20px;gap:8px;transition:background .3s}
+.nav-logo{cursor:pointer;display:flex;align-items:center;margin-right:12px;flex-shrink:0}
+.nav-logo img{height:34px;object-fit:contain}
+.nav-links{display:flex;gap:2px;list-style:none;flex:1;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{white-space:nowrap;text-decoration:none;color:var(--muted);font-weight:800;font-size:13px;padding:6px 13px;border-radius:8px;transition:.18s;cursor:pointer;display:block}
+.nav-links a:hover{color:var(--text);background:var(--surf2)}
+.nav-links a.active{background:var(--y);color:#000;font-weight:900}
+.nav-right{display:flex;align-items:center;gap:6px;margin-left:auto;flex-shrink:0}
+.npill{display:none;align-items:center;gap:4px;border-radius:20px;padding:4px 10px;font-weight:900;font-size:11px;border:1px solid;white-space:nowrap}
+.npill.show{display:flex}
+.np-b{background:var(--boltbg);border-color:var(--bolt);color:var(--bolt)}
+.np-x{background:var(--ybg);border-color:var(--y);color:var(--y)}
+.np-lives{background:rgba(244,67,54,.1);border-color:var(--red);color:var(--red)}
+.btn-nav{background:transparent;border:1px solid var(--border);color:var(--text);font-family:"Nunito",sans-serif;font-weight:800;font-size:13px;padding:6px 16px;border-radius:8px;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-nav:hover{border-color:var(--y);color:var(--y)}
+.nav-av{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--y),#FF8C00);display:none;align-items:center;justify-content:center;font-size:15px;cursor:pointer;font-weight:900;transition:.18s;border:1px solid rgba(255,255,255,.1)}
+.nav-av:hover{transform:scale(1.08)}
+.nav-av.show{display:flex}
+.rainbow-nick{background:linear-gradient(90deg,#ff0080,#ff8c00,#ffe000,#00ff80,#00cfff,#cc00ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:rainbowShift 3s linear infinite;background-size:200%}
