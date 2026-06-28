@@ -458,6 +458,44 @@
         </div>
         <div class="flex-end"><button class="btn-sm" onclick="App.teacher.showPanel('mytests')">Отмена</button><button class="btn-primary" style="font-size:13px;padding:9px 20px" onclick="App.teacher.saveTest()">Сохранить ✓</button></div>
       </div>
+      <!-- ═══ THEORY (СПИСОК УРОКОВ) ═══ -->
+<div id="page-theory" class="page">
+<div class="wrap">
+    <div class="page-hdr">
+        <h1>📚 Теория Java</h1>
+        <p>Изучай Java по урокам с отслеживанием прогресса. Читай или слушай!</p>
+    </div>
+    <div class="theory-grid" id="theoryList"></div>
+</div>
+<footer>© 2025 <span class="fc-y">ЭВРИКА</span></footer>
+</div>
+
+<!-- ═══ THEORY VIEW (ПРОСМОТР УРОКА) ═══ -->
+<div id="page-theory-view" class="page">
+<div class="theory-view-container">
+    <div class="theory-view-header">
+        <button class="back-btn" onclick="App.theory.backToList()">← Список</button>
+        <div>
+            <h1 id="theoryViewTitle">Урок</h1>
+            <div class="theory-desc" id="theoryViewDesc">Описание урока</div>
+        </div>
+    </div>
+
+    <div class="theory-progress-container">
+        <div class="theory-progress-label">📊 Прогресс</div>
+        <div class="theory-progress-bar-wrap">
+            <div class="theory-progress-bar-fill" id="theoryProgressFill" style="width: 0%;"></div>
+        </div>
+        <div class="theory-progress-text" id="theoryProgressText">0%</div>
+        <button class="theory-audio-btn" id="theoryAudioBtn" onclick="App.theory.toggleAudio()">▶ Слушать</button>
+    </div>
+
+    <div class="theory-view-content" id="theoryViewContent">
+        <!-- Текст урока будет загружен сюда -->
+    </div>
+</div>
+<footer>© 2025 <span class="fc-y">ЭВРИКА</span></footer>
+</div>
     </div>
   </div>
 </div>
